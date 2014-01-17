@@ -45,7 +45,11 @@
 {
     if ([value isKindOfClass:[NSString class]]) {
         if (imageHandler) {
-            imageHandler([UIImage imageNamed:value]);
+            if ([value length] > 0) {
+                imageHandler([UIImage imageNamed:value]);
+            } else {
+                imageHandler([UIImage new]);
+            }
         }
 
         if (codeHandler) {
