@@ -8,6 +8,13 @@
 #import "UISSOffsetValueConverter.h"
 #import "UISSArgument.h"
 
+#ifdef __IPHONE_7_0
+#define UITextAttributeFont             NSFontAttributeName
+#define UITextAttributeTextColor        NSForegroundColorAttributeName
+#define UITextAttributeTextShadowColor  NSShadowAttributeName
+#define UITextAttributeTextShadowOffset NSShadowAttributeName
+#endif
+
 @interface UISSTextAttributesValueConverter ()
 
 @property(nonatomic, strong) UISSFontValueConverter *fontConverter;

@@ -4,6 +4,13 @@
 
 #import "UILabel+UISS.h"
 
+#ifdef __IPHONE_7_0
+#define UITextAttributeFont             NSFontAttributeName
+#define UITextAttributeTextColor        NSForegroundColorAttributeName
+#define UITextAttributeTextShadowColor  NSShadowAttributeName
+#define UITextAttributeTextShadowOffset NSShadowAttributeName
+#endif
+
 @implementation UILabel (UISS)
 
 - (void)setTextAttributes:(NSDictionary *)textAttributes;
