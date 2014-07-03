@@ -25,7 +25,7 @@
 
 - (BOOL)canConvertValueForArgument:(UISSArgument *)argument
 {
-    return [argument.type hasPrefix:@"@"] && [[argument.name lowercaseString] hasSuffix:@"image"];
+    return [argument.type hasPrefix:@"@"] && [[argument.name lowercaseString] rangeOfString:@"image"].length > 0;
 }
 
 - (id)edgeInsetsValueFromImageArray:(NSArray *)array;
